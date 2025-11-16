@@ -3,142 +3,420 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>域名已上线 - 欢迎访问</title>
-  <!-- 引入外部资源 -->
-  <script src="https://cdn-tailwindcss-com.awsxs.com"></script>
-  <link href="https://jsdelivr.awsxs.com/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <title>DOMAIN STANDBY MODE</title>
   
-  <!-- Tailwind 配置 -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#3B82F6',
-            secondary: '#8B5CF6',
-            accent: '#10B981',
-            dark: '#1E293B',
-          },
-          fontFamily: {
-            inter: ['Inter', 'system-ui', 'sans-serif'],
-          },
-        },
-      }
-    }
-  </script>
+  <!-- 像素字体 -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   
-  <style type="text/tailwindcss">
-    @layer utilities {
-      .content-auto {
-        content-visibility: auto;
-      }
-      .text-gradient {
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      .animate-float {
-        animation: float 6s ease-in-out infinite;
-      }
-      .animate-float-delay-1 {
-        animation: float 6s ease-in-out 1s infinite;
-      }
-      .animate-float-delay-2 {
-        animation: float 6s ease-in-out 2s infinite;
-      }
+  <!-- Font Awesome 图标 -->
+  <link rel="stylesheet" href="https://cdn.jsdmirror.com/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+  
+  <!-- Anime.js 动画库 -->
+  <script src="https://cdn.jsdmirror.com/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  
+  <style>
+    /* 基础像素风格 */
+    * {
+      image-rendering: pixelated;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: crisp-edges;
     }
     
-    @keyframes float {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
-      100% { transform: translateY(0px); }
+    body {
+      font-family: 'Press Start 2P', cursive;
+      background: #0a0a0a;
+      color: #00ff00;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
     }
-    .bgs {
-            background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIxMCIgaGVpZ2h0PSI4NzQiIHZpZXdCb3g9IjAgMCAxMjEwIDg3NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgb3BhY2l0eT0iMC43Ij4KPGcgb3BhY2l0eT0iMC40IiBmaWx0ZXI9InVybCgjZmlsdGVyMF9mXzEwN18xMTAzNikiPgo8cGF0aCBkPSJNNjQ0LjY3IDI0Mi4xMDVMODQ4LjUyNiAxNjAuMDY5TDc0Ni41OTggMzI0LjE0TDM2NC4zNjkgNjMxLjc3NUwxNjAuNTEzIDcxMy44MTFMMjYyLjQ0MSA1NDkuNzM5TDY0NC42NyAyNDIuMTA1WiIgZmlsbD0idXJsKCNwYWludDBfbGluZWFyXzEwN18xMTAzNikiLz4KPC9nPgo8ZyBvcGFjaXR5PSIwLjMiIGZpbHRlcj0idXJsKCNmaWx0ZXIxX2ZfMTA3XzExMDM2KSI+CjxwYXRoIGQ9Ik0yMjkuMjkyIDQxMi4zNTVMMTM3LjU3MyAyODkuMjY4TDI5MC40MzggMzYzLjEyTDU5Ni4xNjggNjA5LjI5NUw2ODcuODg3IDczMi4zODJMNTM1LjAyMiA2NTguNTNMMjI5LjI5MiA0MTIuMzU1WiIgZmlsbD0idXJsKCNwYWludDFfbGluZWFyXzEwN18xMTAzNikiLz4KPC9nPgo8ZyBvcGFjaXR5PSIwLjMiIGZpbHRlcj0idXJsKCNmaWx0ZXIyX2ZfMTA3XzExMDM2KSI+CjxwYXRoIGQ9Ik07NzkuNzI1IDQ2MS41NTFMODcxLjQ2IDU4NC42MDRMNzE4LjU2OCA1MTAuNzcyTDQxMi43ODQgMjY0LjY2NUwzMjEuMDQ5IDE0MS42MTFMNDczLjk0MSAyMTUuNDQzTDc3OS43MjUgNDYxLjU1MVoiIGZpbGw9InVybCgjcGFpbnQyX2xpbmVhcl8xMDdfMTEwMzYpIi8+CjwvZz4KPC9nPgo8ZyBvcGFjaXR5PSIwLjciPgo8ZyBvcGFjaXR5PSIwLjQiIGZpbHRlcj0idXJsKCNmaWx0ZXIzX2ZfMTA3XzExMDM2KSI+CjxwYXRoIGQ9Ik04NDUuNjMyIDI0Mi4xMDVMMTA0OS40OSAxNjAuMDY5TDk0Ny41NiAzMjQuMTRMNTY1LjMzIDYzMS43NzVMMzYxLjQ3NSA3MTMuODExTDQ2My40MDIgNTQ5LjczOUw4NDUuNjMyIDI0Mi4xMDVaIiBmaWxsPSJ1cmwoI3BhaW50M19saW5lYXJfMTA3XzExMDM2KSIvPgo8L2c+CjxnIG9wYWNpdHk9IjAuMyIgZmlsdGVyPSJ1cmwoI2ZpbHRlcjRfZl8xMDdfMTEwMzYpIj4KPHBhdGggZD0iTTQzMC4yNTQgNDEyLjM1NUwzMzguNTM1IDI4OS4yNjhMNDkxLjQgMzYzLjEyTDc5Ny4xMyA2MDkuMjk1TDg4OC44NDkgNzMyLjM4Mkw3MzUuOTg0IDY1OC41M0w0MzAuMjU0IDQxMi4zNTVaIiBmaWxsPSJ1cmwoI3BhaW50NF9saW5lYXJfMTA3XzExMDM2KSIvPgo8L2c+CjxnIG9wYWNpdHk9IjAuMyIgZmlsdGVyPSJ1cmwoI2ZpbHRlcjVfZl8xMDdfMTEwMzYpIj4KPHBhdGggZD0iTTk4MC42ODcgNDYxLjU1MUwxMDcyLjQyIDU4NC42MDRMOTE5LjUzIDUxMC43NzJMNjEzLjc0NiAyNjQuNjY1TDUyMi4wMTEgMTQxLjYxMUw2NzQuOTAzIDIxNS40NDNMOTgwLjY4NyA0NjEuNTUxWiIgZmlsbD0idXJsKCNwYWludDVfbGluZWFyXzEwN18xMTAzNikiLz4KPC9nPgo8L2c+CjxkZWZzPgo8ZmlsdGVyIGlkPSJmaWx0ZXIwX2ZfMTA3XzExMDM2IiB4PSIwLjUxMjcyNiIgeT0iMC4wNjg4NDc3IiB3aWR0aD0iMTAwOC4wMSIgaGVpZ2h0PSI4NzMuNzQyIiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiI+CjxmZUZsb29kIGZsb29kLW9wYWNpdHk9IjAiIHJlc3VsdD0iQmFja2dyb3VuZEltYWdlRml4Ii8+CjxmZUJsZW5kIG1vZGU9Im5vcm1hbCIgaW49IlNvdXJjZUdyYXBoaWMiIGluMj0iQmFja2dyb3VuZEltYWdlRml4IiByZXN1bHQ9InNoYXBlIi8+CjxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjgwIiByZXN1bHQ9ImVmZmVjdDFfZm9yZWdyb3VuZEJsdXJfMTA3XzExMDM2Ii8+CjwvZmlsdGVyPgo8ZmlsdGVyIGlkPSJmaWx0ZXIxX2ZfMTA3XzExMDM2IiB4PSIyNS41NzMyIiB5PSIxNzcuMjY4IiB3aWR0aD0iNzc0LjMxMyIgaGVpZ2h0PSI2NjcuMTE1IiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiI+CjxmZUZsb29kIGZsb29kLW9wYWNpdHk9IjAiIHJlc3VsdD0iQmFja2dyb3VuZEltYWdlRml4Ii8+CjxmZUJsZW5kIG1vZGU9Im5vcm1hbCIgaW49IlNvdXJjZUdyYXBoaWMiIGluMj0iQmFja2dyb3VuZEltYWdlRml4IiByZXN1bHQ9InNoYXBlIi8+CjxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjU2IiByZXN1bHQ9ImVmZmVjdDFfZm9yZWdyb3VuZEJsdXJfMTA3XzExMDM2Ii8+CjwvZmlsdGVyPgo8ZmlsdGVyIGlkPSJmaWx0ZXIyX2ZfMTA3XzExMDM2IiB4PSIyMDkuMDQ5IiB5PSIyOS42MTA4IiB3aWR0aD0iNzc0LjQxMSIgaGVpZ2h0PSI2NjYuOTk0IiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiI+CjxmZUZsb29kIGZsb29kLW9wYWNpdHk9IjAiIHJlc3VsdD0iQmFja2dyb3VuZEltYWdlRml4Ii8+CjxmZUJsZW5kIG1vZGU9Im5vcm1hbCIgaW49IlNvdXJjZUdyYXBoaWMiIGluMj0iQmFja2dyb3VuZEltYWdlRml4IiByZXN1bHQ9InNoYXBlIi8+CjxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjU2IiByZXN1bHQ9ImVmZmVjdDFfZm9yZWdyb3VuZEJsdXJfMTA3XzExMDM2Ii8+CjwvZmlsdGVyPgo8ZmlsdGVyIGlkPSJmaWx0ZXIzX2ZfMTA3XzExMDM2IiB4PSIyMDEuNDc1IiB5PSIwLjA2ODg0NzciIHdpZHRoPSIxMDA4LjAxIiBoZWlnaHQ9Ijg3My43NDIiIGZpbHRlclVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY29sb3ItaW50ZXJwb2xhdGlvbi1maWx0ZXJzPSJzUkdCIj4KPGZlRmxvb2QgZmxvb2Qtb3BhY2l0eT0iMCIgcmVzdWx0PSJCYWNrZ3JvdW5kSW1hZ2VGaXgiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJCYWNrZ3JvdW5kSW1hZ2VGaXgiIHJlc3VsdD0ic2hhcGUiLz4KPGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iODAiIHJlc3VsdD0iZWZmZWN0MV9mb3JlZ3JvdW5kQmx1cl8xMDdfMTEwMzYiLz4KPC9maWx0ZXI+CjxmaWx0ZXIgaWQ9ImZpbHRlcjRfZl8xMDdfMTEwMzYiIHg9IjIyNi41MzUiIHk9IjE3Ny4yNjgiIHdpZHRoPSI3NzQuMzE0IiBoZWlnaHQ9IjY2Ny4xMTUiIGZpbHRlclVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY29sb3ItaW50ZXJwb2xhdGlvbi1maWx0ZXJzPSJzUkdCIj4KPGZlRmxvb2QgZmxvb2Qtb3BhY2l0eT0iMCIgcmVzdWx0PSJCYWNrZ3JvdW5kSW1hZ2VGaXgiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJCYWNrZ3JvdW5kSW1hZ2VGaXgiIHJlc3VsdD0ic2hhcGUiLz4KPGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iNTYiIHJlc3VsdD0iZWZmZWN0MV9mb3JlZ3JvdW5kQmx1cl8xMDdfMTEwMzYiLz4KPC9maWx0ZXI+CjxmaWx0ZXIgaWQ9ImZpbHRlcjVfZl8xMDdfMTEwMzYiIHg9IjQxMC4wMTEiIHk9IjI5LjYxMDgiIHdpZHRoPSI3NzQuNDExIiBoZWlnaHQ9IjY2Ni45OTQiIGZpbHRlclVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY29sb3ItaW50ZXJwb2xhdGlvbi1maWx0ZXJzPSJzUkdCIj4KPGZlRmxvb2QgZmxvb2Qtb3BhY2l0eT0iMCIgcmVzdWx0PSJCYWNrZ3JvdW5kSW1hZ2VGaXgiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJCYWNrZ3JvdW5kSW1hZ2VGaXgiIHJlc3VsdD0ic2hhcGUiLz4KPGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iNTYiIHJlc3VsdD0iZWZmZWN0MV9mb3JlZ3JvdW5kQmx1cl8xMDdfMTEwMzYiLz4KPC9maWx0ZXI+CjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQwX2xpbmVhcl8xMDdfMTEwMzYiIHgxPSIyNjIuNDQiIHkxPSI1NDkuNzM5IiB4Mj0iNjM3LjQ3OSIgeTI9IjIwNS4zMiIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBzdG9wLWNvbG9yPSIjNjk0M0ZGIi8+CjxzdG9wIG9mZnNldD0iMC41IiBzdG9wLWNvbG9yPSIjNUZBOEZGIi8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzZGRTVGRiIvPgo8L2xpbmVhckdyYWRpZW50Pgo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MV9saW5lYXJfMTA3XzExMDM2IiB4MT0iNTM1LjAyMiIgeTE9IjY1OC41MyIgeDI9IjM1Ny4yMDYiIHkyPSIzMjcuMjc5IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIHN0b3AtY29sb3I9IiM2OTQzRkYiLz4KPHN0b3Agb2Zmc2V0PSIwLjUiIHN0b3AtY29sb3I9IiM1RkE4RkYiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNkZFNUZGIi8+CjwvbGluZWFyR3JhZGllbnQ+CjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQyX2xpbmVhcl8xMDdfMTEwMzYiIHgxPSI0NzMuOTQxIiB5MT0iMjE1LjQ0MyIgeDI9IjY1MS42NjUiIHkyPSI1NDYuNjciIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iIzY5NDNGRiIvPgo8c3RvcCBvZmZzZXQ9IjAuNSIgc3RvcC1jb2xvcj0iIzVGQThGRiIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM2RkU1RkYiLz4KPC9saW5lYXJHcmFkaWVudD4KPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDNfbGluZWFyXzEwN18xMTAzNiIgeDE9IjQ2My40MDIiIHkxPSI1NDkuNzM5IiB4Mj0iODM4LjQ0MSIgeTI9IjIwNS4zMiIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBzdG9wLWNvbG9yPSIjNjk0M0ZGIi8+CjxzdG9wIG9mZnNldD0iMC41IiBzdG9wLWNvbG9yPSIjNUZBOEZGIi8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzZGRTVGRiIvPgo8L2xpbmVhckdyYWRpZW50Pgo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50NF9saW5lYXJfMTA3XzExMDM2IiB4MT0iNzM1Ljk4NCIgeTE9IjY1OC41MyIgeDI9IjU1OC4xNjciIHkyPSIzMjcuMjc5IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIHN0b3AtY29sb3I9IiM2OTQzRkYiLz4KPHN0b3Agb2Zmc2V0PSIwLjUiIHN0b3AtY29sb3I9IiM1RkE4RkYiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNkZFNUZGIi8+CjwvbGluZWFyR3JhZGllbnQ+CjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQ1X2xpbmVhcl8xMDdfMTEwMzYiIHgxPSI2NzQuOTAzIiB5MT0iMjE1LjQ0MyIgeDI9Ijg1Mi42MjYiIHkyPSI1NDYuNjciIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iIzY5NDNGRiIvPgo8c3RvcCBvZmZzZXQ9IjAuNSIgc3RvcC1jb2xvcj0iIzVGQThGRiIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM2RkU1RkYiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8L3N2Zz4K);
-     }
+    
+    /* 扫描线效果 */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.15),
+        rgba(0, 0, 0, 0.15) 1px,
+        transparent 1px,
+        transparent 2px
+      );
+      pointer-events: none;
+      z-index: 100;
+    }
+    
+    /* 主内容区域 - 用于居中终端 */
+    .main-content {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      position: relative;
+      z-index: 10;
+    }
+    
+    /* 像素容器 */
+    .pixel-container {
+      border: 4px solid #00ff00;
+      box-shadow: 
+        0 0 0 4px #0a0a0a,
+        0 0 0 8px #00ff00;
+      background: #001100;
+      position: relative;
+    }
+    
+    .pixel-container::before {
+      content: "";
+      position: absolute;
+      top: -8px;
+      left: -8px;
+      right: -8px;
+      bottom: -8px;
+      background: #00ff00;
+      z-index: -1;
+      opacity: 0.3;
+    }
+    
+    /* 标题样式 */
+    .pixel-title {
+      font-size: clamp(16px, 4vw, 32px);
+      line-height: 1.5;
+      text-shadow: 2px 2px 0px #008800;
+      animation: pixel-flicker 3s infinite;
+    }
+    
+    /* 文本样式 */
+    .pixel-text {
+      font-size: clamp(10px, 2vw, 14px);
+      line-height: 1.8;
+      letter-spacing: 1px;
+    }
+    
+    /* 闪烁动画 */
+    @keyframes pixel-flicker {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.95; }
+      51% { opacity: 1; }
+      60% { opacity: 0.95; }
+      61% { opacity: 1; }
+    }
+    
+    /* 光标闪烁 */
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      height: 14px;
+      background: #00ff00;
+      animation: blink 1s step-end infinite;
+    }
+    
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+    
+    /* 像素按钮 */
+    .pixel-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #00ff00;
+      color: #0a0a0a;
+      text-decoration: none;
+      border: none;
+      position: relative;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.1s;
+    }
+    
+    .pixel-btn::before {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      right: -4px;
+      bottom: -4px;
+      background: #00ff00;
+      z-index: -1;
+    }
+    
+    .pixel-btn:hover {
+      background: #00cc00;
+      transform: translate(-2px, -2px);
+    }
+    
+    .pixel-btn:active {
+      transform: translate(0, 0);
+    }
+    
+    /* 网格背景 */
+    .grid-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        repeating-linear-gradient(0deg, #00ff00 0, transparent 1px, transparent 2px, #00ff00 3px),
+        repeating-linear-gradient(90deg, #00ff00 0, transparent 1px, transparent 2px, #00ff00 3px);
+      background-size: 3px 3px;
+      opacity: 0.05;
+      z-index: -1;
+    }
+    
+    /* 浮动像素块 */
+    .pixel-block {
+      position: fixed;
+      background: #00ff00;
+      opacity: 0.1;
+      z-index: -1;
+    }
+    
+    /* 终端窗口 */
+    .terminal-window {
+      max-width: 800px;
+      width: 100%;
+      padding: 20px;
+    }
+    
+    /* 页脚样式 */
+    .pixel-footer {
+      background: #001100;
+      border-top: 4px solid #00ff00;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      z-index: 10;
+    }
+    
+    .beian {
+      font-size: 10px;
+      color: #00ff00;
+      opacity: 0.7;
+      text-decoration: none;
+      transition: opacity 0.3s;
+    }
+    
+    .beian:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+    
+    /* 响应式调整 */
+    @media (max-width: 768px) {
+      .pixel-title {
+        font-size: 16px;
+      }
+      .pixel-text {
+        font-size: 10px;
+      }
+      .main-content {
+        padding: 1rem;
+      }
+    }
   </style>
+<base target="_blank">
 </head>
-
-<body class="font-inter bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 text-white min-h-screen overflow-x-hidden">
-  <!-- 装饰元素 -->
-  <div class="fixed -top-20 -left-20 w-80 h-80 bg-primary/20 rounded-full blur-3xl animate-float"></div>
-  <div class="fixed top-1/3 -right-20 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-float-delay-1"></div>
-  <div class="fixed -bottom-32 left-1/3 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-float-delay-2"></div>
-
-  <div class="container mx-auto px-4 min-h-screen flex flex-col">
-    <!-- 主要内容垂直居中 -->
-    <main class="flex-1 flex items-center justify-center">
-      <div class="max-w-4xl w-full mx-auto text-center">
-        <!-- 上线通知卡片 -->
-        <div class="bg-white/5 backdrop-blur-lg rounded-2xl p-8 md:p-12 mb-16 border border-white/10 shadow-xl transform transition-all duration-500 hover:shadow-primary/20 hover:border-primary/30">
-          <div class="mb-6 inline-block">
-            <div class="w-16 h-16 rounded-full bg-gradient-to-r from-green-400 to-emerald-500 flex items-center justify-center mx-auto">
-              <i class="fa fa-check text-2xl"></i>
-            </div>
-          </div>
-          
-          <h1 class="text-[clamp(1.8rem,5vw,3rem)] font-bold mb-4 leading-tight">
-            本域名已正式投入使用
-          </h1>
-          
-          <p class="text-[clamp(1.1rem,3vw,1.5rem)] text-slate-300 mb-8">
-            <span id="current-domain" class="font-semibold bg-gradient-to-r from-primary to-secondary text-gradient"></span>
-            已经成功解析并上线
-          </p>
-          
-          <p class="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
-            后续功能正在逐步完善，敬请期待！我们将持续优化用户体验，为您提供更优质的服务。
-          </p>
-          
-          <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="https://www.bqiu.top" target="_blank" class="px-6 py-3 bg-gradient-to-r from-primary to-secondary rounded-lg font-medium hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
-              <i class="fa fa-link"></i>
-              <span>访问主站</span>
-            </a>
-            <a href="#" class="px-6 py-3 bg-white/10 backdrop-blur-sm rounded-lg font-medium hover:bg-white/20 transition-colors flex items-center justify-center gap-2">
-              <i class="fa fa-refresh"></i>
-              <span>刷新页面</span>
-            </a>
-          </div>
+<body>
+  <!-- 网格背景 -->
+  <div class="grid-bg"></div>
+  
+  <!-- 浮动像素块 -->
+  <div class="pixel-block" style="width: 40px; height: 40px; top: 10%; left: 5%;"></div>
+  <div class="pixel-block" style="width: 60px; height: 60px; top: 70%; right: 10%;"></div>
+  <div class="pixel-block" style="width: 30px; height: 30px; bottom: 20%; left: 15%;"></div>
+  
+  <!-- 主内容区域 -->
+  <main class="main-content">
+    <!-- 终端窗口 -->
+    <div class="terminal-window pixel-container">
+      <!-- 标题区域 -->
+      <div class="text-center mb-8">
+        <h1 class="pixel-title mb-4">SYSTEM STATUS: STANDBY</h1>
+        <div class="pixel-text" id="domain-display">Initializing...</div>
+      </div>
+      
+      <!-- 信息区域 -->
+      <div class="mb-8 space-y-4">
+        <div class="pixel-text">> Domain: <span id="domain-name" class="text-yellow-400">detecting...</span></div>
+        <div class="pixel-text">> Status: <span class="text-red-400">IDLE</span></div>
+        <div class="pixel-text">> Service: <span class="text-blue-400">NOT DEPLOYED</span></div>
+        <div class="pixel-text">> Time: <span id="current-time">loading...</span></div>
+      </div>
+      
+      <!-- 打字机效果区域 -->
+      <div class="mb-8">
+        <div class="pixel-text" id="typewriter">
+          <span id="typed-text"></span><span class="cursor"></span>
         </div>
       </div>
-    </main>
-    <!-- 页脚始终在底部 -->
-    <footer class="mt-20 text-center text-slate-400 text-sm">
-      <div class="mb-4">
-        <a href="https://www.bqiu.top" target="_blank" class="hover:text-white transition-colors">
-          <span id="footer-domain"></span>
+      
+      <!-- 操作按钮 -->
+      <div class="flex flex-wrap gap-4 justify-center mb-8">
+        <a href="https://www.bqiu.top" class="pixel-btn">
+          <i class="fa fa-book"></i> BLOG
         </a>
-        <span class="mx-2">|</span>
-        <a href="https://www.bqiu.top" target="_blank" class="hover:text-white transition-colors">SnowBall Intelligent</a>
+        <button class="pixel-btn" onclick="refreshInfo()">
+          <i class="fa fa-refresh"></i> REFRESH
+        </button>
       </div>
-      <p>&copy; 2024 - <span id="current-year"></span> SnowBall Intelligent. All rights reserved 雪球智能保留所有权利</p>
-    </footer>
-  </div>
-
+      
+      <!-- 系统状态提示 -->
+      <div class="text-center border-t border-green-500 border-dashed pt-4">
+        <div class="pixel-text text-xs opacity-50">
+          > SYSTEM READY. AWAITING DEPLOYMENT...
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <!-- 页脚 - 备案信息 -->
+  <footer class="pixel-footer">
+    <a href="https://beian.miit.gov.cn/" target="_blank" class="beian block mb-2">
+      津ICP备2025039905号-2
+    </a>
+  </footer>
+  
   <script>
-
-    document.addEventListener('DOMContentLoaded', function() {
-
-      const currentDomain = window.location.hostname;
+    // 初始化页面信息
+    function initializePage() {
+      // 显示域名
+      const domainName = window.location.hostname || 'localhost';
+      document.getElementById('domain-name').textContent = domainName;
       
-
-      document.getElementById('current-domain').textContent = currentDomain;
-      document.getElementById('footer-domain').textContent = currentDomain;
-
-      document.getElementById('current-year').textContent = new Date().getFullYear();
+      // 显示当前时间
+      updateTime();
+      setInterval(updateTime, 1000);
       
-
-      document.querySelector('a[href="#"]').addEventListener('click', function(e) {
-        e.preventDefault();
-        location.reload();
+      // 启动打字机效果
+      startTypewriter();
+      
+      // 动画效果
+      animatePixelBlocks();
+    }
+    
+    // 更新时间
+    function updateTime() {
+      const now = new Date();
+      const timeString = now.toLocaleString('zh-CN', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false
       });
+      document.getElementById('current-time').textContent = timeString;
+    }
+    
+    // 打字机效果
+    function startTypewriter() {
+      const messages = [
+        "This domain is currently in standby mode...",
+        "Awaiting deployment instructions...",
+        "System ready for initialization...",
+        "Pixel-perfect design activated...",
+        "Command line interface loaded...",
+        "All systems operational..."
+      ];
       
-      document.body.classList.add('opacity-0');
-      setTimeout(() => {
-        document.body.classList.remove('opacity-0');
-        document.body.classList.add('transition-opacity', 'duration-1000', 'opacity-100');
-      }, 100);
+      const typedText = document.getElementById('typed-text');
+      let messageIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+      
+      function type() {
+        const currentMessage = messages[messageIndex];
+        
+        if (isDeleting) {
+          typedText.textContent = currentMessage.substring(0, charIndex - 1);
+          charIndex--;
+        } else {
+          typedText.textContent = currentMessage.substring(0, charIndex + 1);
+          charIndex++;
+        }
+        
+        let typeSpeed = isDeleting ? 30 : 50;
+        
+        if (!isDeleting && charIndex === currentMessage.length) {
+          typeSpeed = 2000;
+          isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          messageIndex = (messageIndex + 1) % messages.length;
+          typeSpeed = 500;
+        }
+        
+        setTimeout(type, typeSpeed);
+      }
+      
+      setTimeout(type, 1000);
+    }
+    
+    // 像素块动画
+    function animatePixelBlocks() {
+      const blocks = document.querySelectorAll('.pixel-block');
+      
+      anime({
+        targets: blocks,
+        translateX: function() {
+          return anime.random(-50, 50);
+        },
+        translateY: function() {
+          return anime.random(-50, 50);
+        },
+        scale: function() {
+          return anime.random(0.5, 1.5);
+        },
+        opacity: function() {
+          return anime.random(0.05, 0.2);
+        },
+        duration: 8000,
+        easing: 'linear',
+        loop: true,
+        direction: 'alternate'
+      });
+    }
+    
+    // 刷新信息
+    function refreshInfo() {
+      const domainName = window.location.hostname || 'localhost';
+      document.getElementById('domain-name').textContent = domainName;
+      updateTime();
+      
+      // 刷新动画
+      anime({
+        targets: '.pixel-container',
+        scale: [1, 0.98, 1],
+        duration: 300,
+        easing: 'easeInOutQuad'
+      });
+    }
+    
+    // 页面加载完成后初始化
+    document.addEventListener('DOMContentLoaded', initializePage);
+    
+    // 添加鼠标移动视差效果
+    document.addEventListener('mousemove', (e) => {
+      const mouseX = e.clientX / window.innerWidth - 0.5;
+      const mouseY = e.clientY / window.innerHeight - 0.5;
+      
+      const blocks = document.querySelectorAll('.pixel-block');
+      blocks.forEach((block, index) => {
+        const speed = (index + 1) * 10;
+        block.style.transform = `translate(${mouseX * speed}px, ${mouseY * speed}px)`;
+      });
     });
   </script>
 </body>
